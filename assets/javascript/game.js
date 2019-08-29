@@ -7,38 +7,52 @@ var computerChoiceArr = [
 var wins = 0
 var losses = 0
 var guessesLeft = 9
-var guessesSofar =""
+var guessesSofar =[];
+// var userGuess = document.onkeyup;
 
 var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
-var guessesLeft = document.getElementById("guesses-left");
-var guessesSoFar = document.getElementById("guesses-so");
-var computerChoice = renderLetter(computerChoiceArr)
+var guessesLeftText = document.getElementById("guesses-left");
+var guessesSoFarText = document.getElementById("guesses-so-far");
+//create count variable
 
+
+
+
+var computerGuess = computerChoiceArr[Math.floor(Math.random()* computerChoiceArr.length)];
+console.log(computerGuess);
 
 //Create function to run whenever the user presses a key
-//make function for computer randomly pick a letter of the alphabet
 document.onkeyup = function(event) {
-    var userGuess = event.key();
+    //make function for computer randomly pick a letter of the alphabet
+    var userGuess = event.key;
+    console.log(userGuess);
+    guessesSoFar.text(userGuess);
+         
 
-    function renderLetter (arr) {
-    
-    return arr[Math.floor(Math.random()* arr.length)]
-}
-    console.log(renderLetter(computerChoiceArr))
 
+
+    // //compare user guess to computer pick
     if (userGuess === computerChoice){
         wins++;
-    }
-
-    else {
-        guessesLeft - 1;
+        alert("You really ARE psychic!!!");
         
     }
 
-}
-//compare user guess to computer pick
+    else {
+        guessesLeft--;
+       
+    
 
+    }
+
+    if (guessesLeft === 0){
+        alert("You LOSE!!!");
+        losses++;
+    }
+}
 //print results to user view 
+
+//create a reset for game after a win, or 9 wrong guesses
 
 //create a counter to track wins, losses, guesses left, guesses so far
