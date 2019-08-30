@@ -1,8 +1,25 @@
 body {
-   background-image: url()
+   background-image: url(http://www.psychicdinners.com.au/__static/e284126531f450fc5ebbec231e8cfe1d/617181-bright_star_background.jpeg);
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   text-align: center;
 }
 
-#div {
-position:
+h1 {
+    color:whitesmoke;
+    font-size: 4rem;
+    
+}
+div {
+    bottom: 30%;
+    display: inline-flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: whitesmoke;
+    font-size: 2rem;
+    margin: 8%;
+    padding: 3%;
+    border: .3rem solid whitesmoke;
+
+
+
 
 }
