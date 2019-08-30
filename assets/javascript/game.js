@@ -20,6 +20,7 @@ var guessesSoFarText = document.getElementById("guesses-so-far");
 
 //create count variable
 
+//TODO: have computerGuess reset after each win and loss
 var computerGuess = computerChoiceArr[Math.floor(Math.random()* computerChoiceArr.length)];
 console.log(computerGuess);
 
@@ -29,11 +30,12 @@ document.onkeyup = function(event) {
     var userGuess = event.key;
     console.log(userGuess);
     guessesSoFar.push(userGuess);
-   
-    //compare user guess to computer pick
-    //create a counter to track wins, losses, guesses left, guesses so far
     
+    //TODO: create a stop and alert if a key that is not in the array is pressed
+    if (userGuess )
+    //compare user guess to computer pick
     if (userGuess === computerGuess){
+        //create a counter to track wins, losses, guesses left, guesses so far
         wins++;  
         alert("You really ARE psychic!!! I was thinking of the letter " + (computerGuess) + ".");
         guessesSoFar=[];        
