@@ -54,7 +54,7 @@ document.onkeyup = function(event) {
         losses++;
         guessesSoFar=[];        
         guessesLeft=9;
-    }
+        }
     
     //print results to user view 
     guessesSoFarText.textContent = guessesSoFar;
@@ -64,3 +64,4 @@ document.onkeyup = function(event) {
 }
 
 //create a reset for game after a win, or 9 wrong guesses
+
